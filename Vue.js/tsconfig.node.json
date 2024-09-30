@@ -1,0 +1,25 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": [
+    "vite.config.*",
+  ],
+  "exclude": [
+    "vite.config.ts.timestamp-*.mjs",
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    "allowJs": true,
+
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"],
+    "declaration": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types/",
+    ]
+  }
+}
